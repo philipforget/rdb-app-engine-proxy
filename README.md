@@ -1,3 +1,4 @@
-Simple flask proxy for the Readability content api.
+#☃
 
-Implements simple throttling so you don't have to expose your public key.
+Proxy the readability content API with some throttling of our own so bas stuff
+doesnt happen and the world doesn't implode.
