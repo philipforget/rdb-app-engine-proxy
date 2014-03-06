@@ -6,7 +6,7 @@ from hashlib import sha1
 
 app = Flask(__name__)
 
-RDB_TOKEN = '3317a37bc907d8541e0d3f71aef50a70bb8a83a8'
+RDB_TOKEN = 'ohsnap'
 # Number of requests an ip address can hit per minute, not a moving window
 MINUTE_LIMIT = 30
 # Dont put this in source control! KEEP IT HIDDEN FOREVER
