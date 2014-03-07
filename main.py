@@ -6,7 +6,7 @@ from hashlib import sha1
 
 app = Flask(__name__)
 
-RDB_TOKEN = 'ohsnap'
+RDB_TOKEN = 'nope'
 # Number of requests an ip address can hit per minute, not a moving window
 MINUTE_LIMIT = 30
 # Dont put this in source control! KEEP IT HIDDEN FOREVER
@@ -42,7 +42,10 @@ def proxy_rdb():
             callback=callback, content=content)
         mimetype = 'application/javascript'
 
-    return Response(content, mimetype=mimetype, status=200)
+    response = Response(content, mimetype=mimetype, status=200)
+    response.headers['Access-Control-Allow-Origin'] = "*"
+
+    return response
 
 
 @app.errorhandler(404)
