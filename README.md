@@ -16,7 +16,14 @@ callback_value({...})
 
 otherwise content will be returned as `application/json`.
 
-## Examples:
+## Configuration
+
+Configuration is done in main.py. Two config variables can be set:
+
+* RDB_TOKEN: Your Readability content api token (do not check this into a public repo!)
+* MINUTE_LIMIT: The number of requests, per minute, to allow. This is alimit based on the ip of the requesting user.
+
+## Examples
 Just proxy the content for one article and return the response: http://sample-rdb-proxy.appspot.com/?url=http://paulgraham.com/ambitious.html
 
 Make a request for jsonp: http://sample-rdb-proxy.appspot.com/?url=http://paulgraham.com/ambitious.html&callback=some_function_name
