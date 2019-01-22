@@ -1,3 +1,5 @@
+# Archived #
+
 # Readability app-engine content proxy
 
 A simple, memcached based throttling proxy for Readability's content API which can run on google app engine.
